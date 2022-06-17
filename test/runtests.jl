@@ -1,4 +1,4 @@
-using HexagonalNeighborhood
+using HexagonalNeighborhoods
 using Test
 
 @testset "HexagonalNeighborhood" begin
