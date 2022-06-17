@@ -1,5 +1,8 @@
 module HexagonalNeighborhoods
 
-# Write your package code here.
+using HexagonalArrays
+
+export NeighborhoodIndex, HexagonalNeighborhood, @neighborhood
+include("hexagonal_neighborhood.jl")
 
 end
