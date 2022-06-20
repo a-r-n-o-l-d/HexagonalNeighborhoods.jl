@@ -15,13 +15,15 @@ Base.@propagate_inbounds Base.setindex!(A::HexagonalArray, v, I::NeighborhoodInd
 
 # Extends function of HexagonalIndex
 # arithmetic operators
-to_cartesian(I::NeighborhoodIndex, d_unit) = to_cartesian(I.I, d_unit)
+HexagonalArrays.to_cartesian(I::NeighborhoodIndex, d_unit) = to_cartesian(I.I, d_unit)
 
-heuclidean(I1::NeighborhoodIndex, I2::HexagonalIndex, d_unit) = heuclidean(I1.I, I2, d_unit)
+HexagonalArrays.heuclidean(I1::NeighborhoodIndex, I2::HexagonalIndex, d_unit) = heuclidean(I1.I, I2, d_unit)
 
-heuclidean(I1::HexagonalIndex, I2::NeighborhoodIndex, d_unit) = heuclidean(I1, I2.I, d_unit)
+HexagonalArrays.heuclidean(I1::HexagonalIndex, I2::NeighborhoodIndex, d_unit) = heuclidean(I1, I2.I, d_unit)
 
-heuclidean(I1::NeighborhoodIndex, I2::NeighborhoodIndex, d_unit) = heuclidean(I1.I, I2.I, d_unit)
+HexagonalArrays.heuclidean(I1::NeighborhoodIndex, I2::NeighborhoodIndex, d_unit) = heuclidean(I1.I, I2.I, d_unit)
+
+
 
 struct HexagonalNeighborhood{T} <: AbstractVector{T}
     neighborhood::Vector{T}

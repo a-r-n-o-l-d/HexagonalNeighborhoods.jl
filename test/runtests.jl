@@ -1,6 +1,7 @@
+using HexagonalArrays
 using HexagonalNeighborhoods
 using Test
 
-@testset "HexagonalNeighborhood" begin
+@testset "HexagonalNeighborhoods" begin
     include("hexagonal_neighborhood.jl")
 end
